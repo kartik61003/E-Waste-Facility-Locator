@@ -1,19 +1,27 @@
 .App {
   text-align: center;
 }
-
 main{
   padding:10px;
-  margin: 0 auto;
+  margin-top: 100px;
 }
 
 .navbar{
+  position: fixed;
+  top: 0px;
+  left: 0px;
   display: flex;
   flex-direction: row;
-  margin: 10px;
   padding: 0px 20px 5px 20px;
   align-items: center;
+  background-color: white 10%;
+  z-index: 3;
+  transition: opacity 0.5s; /* Add a transition for smooth fade-out */
+  opacity: 1;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.navbar.scrolled {
+  opacity: 0; /* When scrolled, set opacity to 0 for fade-out effect */
 }
 .navbar .btn-grp{
   display: flex;
@@ -29,20 +37,65 @@ main{
   font-style: italic;
   border-radius: 20px;
   transition: all 700ms;
-
 }
-
 .navbar a:hover{
   background: rgb(26, 106, 13);
   color: white;
   cursor: pointer;
 }
-
 #navbar-image{
   height: 100%;
   width: 8%;
+  margin-top: 3px;
   align-items: start;
 }
+
+.about-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-top: 105px;
+  margin-bottom: 15vh;
+}
+.about-container h1{
+  font-size: 7vw;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.type-effect{
+  height: 320px;
+}
+.type-effect #type-word{
+  color: rgba(82, 169, 53, 0.611);
+  text-shadow: 2px 2px #000000;
+}
+.about-container img{
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  filter: blur(8%);
+  -webkit-filter: blur(8px);
+}
+.about-container img::before{
+  position: relative;
+}
+.aboutus-content{
+  padding: 1vw;
+  margin: 2vw;
+}
+.aboutus-content p{
+  color: white;
+  font-size: 20px;
+  text-align: justify;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
 
 .App-header {
   background-color: #d4eddb;
