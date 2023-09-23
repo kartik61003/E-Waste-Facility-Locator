@@ -1,21 +1,26 @@
 import React from 'react'
 
-const Cards = () => {
+const Cards = ({cardsData}) => {
   return (
     <>
-        <div style={{background:'light green'}} className='info-card'>
+        {cardsData.map((curEle)=>{
+          const {id,color,pic,desc} = curEle;
+          return(
+            <>
+            <div style={{background:{color}}} className='info-card' >
             <div className='card-svg'>
-                <img src='https://www.pngall.com/wp-content/uploads/5/Green-Leaf-PNG-Free-Image.png'></img>
+                <img src={pic}></img>
             </div>
             <div className='card-desc'>
-                <p>blahh blahh blahh blahh blahh blahh blahh blahh blahh blahh blahh 
-                blahh blahh blahh blahh blahh blahh blahh blahh blahh blahh blahh blahh 
-                blahh blahh blahh blahh blahh 
-                blahh blahh blahh blahh 
-                blahh blahh blahh blahh blahh blahh blahh blahh blahh blahh blahh blahh blahh blahh blahh
+                <p>
+                {desc}
                 </p> 
             </div>
         </div>
+            </>
+          );
+        })}
+
     </>
   )
 }

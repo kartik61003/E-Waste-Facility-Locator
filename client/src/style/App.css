@@ -103,34 +103,71 @@ main{
   flex-wrap: wrap;
   padding: 10px;
   gap: 5%;
-  margin-top: 150px;
   justify-content: center;
 }
 .cards-container img{
   position: absolute;
-  transform: translateX(135%) translateY(-50%);
+  transform: translateX(100%) translateY(-80%);
   width: 81px;
+  background-color: rgb(130, 184, 232);
+  border-radius: 80px;
+  padding: 10px;
   height: 78px;
+  margin-top: 30px;
 }
 .cards-container .info-card{
   width: 300px;
   height: 400px;
+  padding: 15px;
   border-radius: 22px;
   margin: 2%;
   border: 1px solid #000;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: all 700ms ease-in-out;
 }
-.cards-container p{
+.cards-container .info-card:hover{
+  background: rgb(45, 112, 35);
+  color: white;
+  cursor: pointer;
+  box-shadow: -8px 10px 10px rgba(0, 0, 0, 0.408);
+}
+  .cards-container p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+  height: 300px;
+  text-align: justify;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+}
+.card-container-heading{
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 100px;
+  font-size: 35px;
+  padding: 20px; 
+  height: max-content;
+  color: rgba(118, 104, 14, 0.775);
   text-align: center;
-  transform: translateY(35%);
-  overflow-y: hidden;
-  font-size: 20px;
-
+  padding-bottom: 0px;
 }
 
+.google-map
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .google-map iframe {
+    height: 500px;
+    width: 65%;
+}
 
 Footer{
   position: relative;
+  width: 100%;
+  background-color: green;
 }
 .App-header {
   background-color: #d4eddb;

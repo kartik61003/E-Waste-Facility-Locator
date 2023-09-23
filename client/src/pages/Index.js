@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TypewriterEffect from '../components/TypewriterEffect'
 import Cards from '../components/Cards'
+import CardData from '../components/CardData'
+import MapApi from '../components/MapApi'
 
 const Index = () => {
+  const [cardsData, setcardsData] = useState(CardData);
   return (
     <>
       <div className='about-container'>
@@ -19,15 +22,12 @@ const Index = () => {
         </div>
       </div>
 
-      <div className='cards-container'>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-          <Cards/>
-
+        <div className='card-container-heading'><h1>But Why You Need Us <span style={{color:'green'}}>?</span></h1></div>
+        <div className='cards-container'>
+          <Cards cardsData={cardsData}/>
         </div>
+        <MapApi/>
+      
     </>
   )
 }
