@@ -26,7 +26,7 @@ const Calculator = () => {
 
   return (
     <div className='calc'>
-      <label htmlFor="itemSelect">Select an item:</label>
+      <label htmlFor="itemSelect">Select an item: </label>
       <select id="itemSelect" value={item} onChange={handleItemChange}>
         <option value="laptop">Laptop</option>
         <option value="mobile">Mobile</option>
@@ -34,7 +34,7 @@ const Calculator = () => {
         <option value="TV">TV</option>
         <option value="others">Others</option>
       </select>
-
+    <br></br>
       <label htmlFor="weightInput">Enter the weight of the thing (in kg):</label>
       <input
         type="number"
